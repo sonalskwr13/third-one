@@ -1,0 +1,126 @@
+<head>
+	<style>
+		button
+		{
+			font-size: 40px;
+			border: solid black 2px;
+			background-color: green;
+			color: yellow;
+			width: 50px;
+			font-weight: 600;
+			font-family: serif;
+		}
+		input
+		{
+			font-size: 30px;
+			width: 300px;
+			height: 60;
+		}
+		div
+		{
+			border: solid black 3px;
+			margin: 20px;
+			margin-left: 500px;
+			padding-bottom: 10px;
+			background-color: grey;
+
+
+		}
+		h1
+		{
+			margin-left: 500px;
+
+		}
+	</style>
+	
+</head>
+<body>
+	<!-- <h2 id="t1" style="color:red">what should write</h2>
+	<button onclick="show()">about</button>
+	<button ondblclick ="hell()">here</button><br><br>
+	<div id="r"></div>
+	<script>
+		function show()
+		{
+            var t1=document.getElementById('t1').innerHTML;
+            document.getElementById('r').innerHTML=t1;
+			
+		}
+		function hell()
+		{
+			var t1=document.getElementById("t1").innerHTML;
+			document.getElementById('r').innerHTML=t1;
+		}
+		
+		
+	</script> -->
+
+	<h1>calculator</h1>
+	<div style="float:left">
+	
+	<center><input type="text" name="nm" placeholder="please enter name" id="in" style="background-color: cyan;">
+	<br><br>
+	<button onclick="val('1')">1</button>
+	<button onclick="val('2')">2</button>
+	<button onclick="val('3')">3</button>
+	<button onclick="val('4')">4</button><br><br>
+	<button onclick="val('5')">5</button>
+	<button onclick="val('6')">6</button>
+	<button onclick="val('7')">7</button>
+	<button onclick="val('8')">8</button><br><br>
+	<button onclick="val('9')">9</button>
+	<button onclick="val('0')">0</button>
+	<button onclick="val('/')">/</button>
+	<button onclick="fact()">!</button><br><br>
+	<button onclick="val('+')">+</button>
+	<button onclick="val('-')">-</button>
+	<button onclick="val('*')">*</button>
+	<button onclick="rchar()">rc</button>
+	<br><br>
+    <button onclick="sq()">x<sup>2</sup></button>
+    <button onclick="val('**3')">x<sup>3</sup></button>
+    <button onclick="res()">=</button>
+<button onclick="clr()">cl</button></center></div>
+	<script>
+		function val(n)
+		{
+			var t=document.getElementById('in').value;
+			document.getElementById('in').value=t+n;
+		}
+		function res()
+		{
+			var t=document.getElementById('in').value;
+			document.getElementById('in').value=eval(t);
+		}
+		function sq()
+		{
+			var t=document.getElementById('in').value;
+			document.getElementById('in').value=t**2;
+		}
+		function fact()
+		{
+			var t=document.getElementById('in').value;
+			var f=1;
+			for(var i=1; i<=t; i++)
+			{
+				f=f*i;
+			}
+            document.getElementById('in').value=f;
+		}
+		function rchar()
+		{
+           var t=document.getElementById('in').value;
+           t=t.substring(0,t.length-1);
+           document.getElementById('in').value=t;
+		}
+		function clr()
+		{
+			
+			document.getElementById('in').value="";
+		}
+
+	</script>
+	
+
+
+</body>
